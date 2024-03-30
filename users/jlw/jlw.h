@@ -48,9 +48,37 @@ enum custom_keycodes {
 #define O_GUI   LGUI_T(KC_O)
 
 /*** Others ***/
-#define SFT_BSPC    LSFT_T(KC_BSPC)
+#define BSPC_SFT    LSFT_T(KC_BSPC)
 
 
 /* portable keymaps */
 /** 10u **/
 /*** base ***/
+
+                        /* ╭────────┬────────┬────────┬────────┬────────╮ */
+                        /* │  Q     │  W     │  F     │  P     │  B     │ */
+#define ___5BASE_1_L___     KC_Q,    KC_W,    KC_F,    KC_P,    KC_B
+                        /* ├────────┼────────┼────────┼────────┼────────┤ */
+                        /* │  A/GUI │  R/Alt │  S/Ctl │  T     │  G     │ */
+#define ___5BASE_2_L___     A_GUI,   R_ALT,   S_CTL,   KC_T,    KC_G
+                        /* ├────────┼────────┼────────┼────────┼────────┤ */
+                        /* │ Z      │  X     │  C     │  D     │  V     │ */
+#define ___5BASE_3_L___     KC_Z,    KC_X,    KC_C,    KC_D,    KC_V
+                        /* ╰────────┴────────┼────────┼────────┼────────┤ */
+                        /*                            │ Tab/NAV│ BS/SFT │ */
+#define ___BASE_THUMB_L___                             TAB_NAV, BSPC_SFT  
+                        /*                            ╰────────┴────────╯ */
+                        
+                        /* ╭────────┬────────┬────────┬────────┬────────╮ */
+                        /* │  J     │  L     │  U     │  Y     │  ' "   │ */
+#define ___5BASE_1_R___     KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOT
+                        /* ├────────┼────────┼────────┼────────┼────────┤ */
+                        /* │  M     │  N     │  E/Ctl │  I/Alt │ O/GUI  │ */
+#define ___5BASE_2_R___     KC_M,    KC_N,    E_CTL,   I_ALT,   O_GUI
+                        /* ├────────┼────────┼────────┼────────┼────────┤ */
+                        /* │  K     │  H     │  , <   │  . >   │/ ?     │ */
+#define ___5BASE_3_R___     KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH
+                        /* ├────────┼────────┼────────┼────────┴────────╯ */
+                        /* │ Spc/NUM│ Ent/FUN│ */
+#define ___BASE_THUMB_R___  SPC_NUM, ENT_FUN
+                        /* ╰────────┴────────╯ */
